@@ -35,7 +35,12 @@ const App = () => {
   const [project, setProject] = useState(emptyProject);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <Routes>
         <Route
           path="/"
